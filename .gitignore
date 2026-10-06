@@ -1,0 +1,36 @@
+# Python
+
+*.__pycache__
+*.py[code]
+*.pyo
+*.pyd
+
+# Environnements virtuels
+
+venv/
+.venv/
+env/
+ENV/
+
+# Jupiter
+
+.ipynb_checkpoints/
+
+# Variables d'environnement
+
+.env.*
+.env
+
+# Logs
+
+*.log 
+
+# Données temporaires
+
+data/temp/
+data/tmp/
+
+# Fichiers Excel temporaires
+
+~$*.xlsx
+~$*.xls 
