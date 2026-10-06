@@ -8,6 +8,8 @@ L'objectif est de construire progressivement un observatoire permettant d'explor
 - Création du dépôt Github et de la branche de travail (audrey)
 - Mise en place de notre première architecture du projet
 - initation du contenu des différents fichiers: README.md, requirements.txt, journal de board.
+- Mise en place de notre environnement virtuel de travail (.venv)
+- Importation des différentes librairies nécessiare pour ce projet dans notre .venv.
 - Identifier et documenter les sources des données publiques permettant de construire l'observatoire.
 - Les principales sources de données envisagées sont les données publiques de :
 

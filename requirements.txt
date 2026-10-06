@@ -3,5 +3,5 @@ numpy
 requests
 matplotlib
 seaborn
-jupiter
+jupyter
 openpyxl
