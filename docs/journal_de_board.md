@@ -33,13 +33,36 @@ Nous avons sélectionner et enrégistrer pour un début ces 2 API:
     - API Marché du Travail v1 qui nous servira pour les statistiques du marché de l'emploi.
     - ROME 4.0 - Métiersv1 qui nous permettra de travailler avec les métiers et les codes du Répertoire Opérationnel des Métiers et des Emplois (ROME)
 Les 2 API sont rattachées à mon application.
-- Nous avons créer le fichier .env où nous allons stocker notre identifiant et notre clé 
-- nous avons récupérer et examiner le fichier des offres de France Travail.
+- Nous avons créer le fichier .env/ où nous allons stocker notre identifiant et notre clé 
+- Vérification de la documentation disponible : nous allons utiliser l'authentification OAuth 2.0 de France Travail avec les identifiants de mon application.
+- Installer python-dotenv pour sécuriser les secrets et API keys donc permet surtout de charger les variables sensibles depuis .env sans les écrire directement dans le code. 
+- Nous allons faire un test API pour récupérer la données d'un indicateur depuis l'API du marché du travail.
+    - nous avons chercher comment construire l'URL d'un token
 
+## Jour 3 et 4: 
+- nous avons créer le fichier `test_api.ipynb` pour récupérer et construire l'API du marché de travail v1 mais l'erreyr persiste 403 à cause d'un manque d'autorisations spécifiques. 
+- nous avons fait un courriel au service technique franetravail.io afin d'avoir de l'aide et nous attendons leur retour.
 
+## Jour 6 Définition des objectifs métier
 
-## prochainement
-- Nous allons Auditer ces sources en comparant celles qui sont pertinentes, évolutives, accessibles, documenter et publiables.
-- Puis nous choisirons la source principale après comparaison des données disponibles et de leur intérêt analytique.
+- Création du document `docs/objectifs_metier.md` pour formaliser le contexte, la problématique et les objectifs de l'Observatoire de l'emploi.
+- Définition des principales questions métier : répartition des offres par métier et territoire, évolution des offres dans le temps et exploration des éventuelles tensions de recrutement.
+- Identification des principaux indicateurs à étudier, sous réserve de la disponibilité des données.
+
+### Difficultés rencontrées
+
+* Les demandes d'accès à l'API Marché du travail de France Travail renvoient une erreur HTTP 403, alors que l'authentification OAuth fonctionne et fournit un jeton d'accès.
+* Un courriel a été envoyé à France Travail pour obtenir des précisions sur les autorisations et les éventuelles conditions d'accès aux ressources de l'API.
+
+### Décisions prises
+
+* Poursuivre la préparation du projet pendant l'attente de la réponse de France Travail.
+* Préparer la structure des données et les étapes de traitement sans considérer les données comme disponibles avant d'avoir confirmé leur accès.
+* Étudier, si nécessaire, des sources publiques alternatives.
+
+### prochainement
+- Identifier les sources de données mobilisables.
+- Préparer le processus d'extraction et de contrôle de la qualité des données.
+- Reprendre les tests de l'API dès réception du retour de France Travail.
 
 
