@@ -60,9 +60,28 @@ Les 2 API sont rattachées à mon application.
 * Préparer la structure des données et les étapes de traitement sans considérer les données comme disponibles avant d'avoir confirmé leur accès.
 * Étudier, si nécessaire, des sources publiques alternatives.
 
+## Jour 7: Identifier les sources de données 
+- Résoudre les difficultés d’accès à l’API Marché du travail 
+- Identifier et explorer les indicateurs du Marché du travail
+- identifier la structure nécessaire pour extraire les statistiques sur les offres d’emploi
+- Consultation du référentiel GET /v1/referentiel/details-indicateurs pour étudier l’indicateur OFF_1
+- Analyse des paramètres disponibles : périodes trimestrielles, types de territoires, types d’activités et nomenclatures.
+- Identification de 252 croisements autorisés, dont 36 pour le territoire régional (REG).
+- Retrouvaille et reconstruction de la requête POST /v1/indicateur/stat-offres avec un corps JSON.
+- Test de la requête avec un jeton OAuth valide et obtention d’une réponse HTTP 200.
+- Test effectué porte sur le métier « Agent / Agente d’entretien des espaces verts » (ROME A1203), en Nouvelle-Aquitaine (REG, code 75), pour le deuxième trimestre 2026.
+
+### Difficultés et points de vigilance
+- La documentation consultée ne permettait pas de retrouver facilement le format de la requête statistique.
+- Le champ codeNomenclature doit être pris en compte pour distinguer les offres France Travail (PE) de toutes les offres (TOFF).
+- Le test reste ponctuel : il ne constitue pas encore le jeu de données officiel du projet.
+
 ### prochainement
-- Identifier les sources de données mobilisables.
-- Préparer le processus d'extraction et de contrôle de la qualité des données.
-- Reprendre les tests de l'API dès réception du retour de France Travail.
+
+- Vérifier la cohérence des paramètres et des résultats retournés.
+- Définir le périmètre de l’extraction : territoires, métiers et périodes.
+- Structurer les réponses JSON en DataFrame avec pandas.
+- Contrôler les données obtenues avant leur enregistrement dans data/raw/.
+- Documenter la source, les paramètres de collecte et les limites des données dans le README.
 
 
