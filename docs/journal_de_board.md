@@ -73,15 +73,29 @@ Les 2 API sont rattachées à mon application.
 
 ### Difficultés et points de vigilance
 - La documentation consultée ne permettait pas de retrouver facilement le format de la requête statistique.
+Un blocage lié aux scopes a notamment empêché l’accès à l’API Marché du travail. Après plusieurs vérifications, le support technique France Travail a apporté une réponse rapide permettant d’identifier les scopes à utiliser et de poursuivre les tests.
 - Le champ codeNomenclature doit être pris en compte pour distinguer les offres France Travail (PE) de toutes les offres (TOFF).
 - Le test reste ponctuel : il ne constitue pas encore le jeu de données officiel du projet.
 
-### prochainement
+## Jour 8 et 9 :  Poursuivre l’exploration des API France Travail 
+- Exploration du catalogue des indicateurs disponibles, dont `OFF_1`, consacré aux offres d’emploi.
+- Réalisation d’une première requête de test sur les statistiques d’offres et exploration de la structure de la réponse JSON avec Pandas.
+- Connexion réussie à l’API **ROME 4.0 – Métiers**.
+- Récupération de 1 911 éléments dans la réponse de l’API ROME, contenant notamment le code et le libellé de chaque métier.
 
-- Vérifier la cohérence des paramètres et des résultats retournés.
-- Définir le périmètre de l’extraction : territoires, métiers et périodes.
-- Structurer les réponses JSON en DataFrame avec pandas.
-- Contrôler les données obtenues avant leur enregistrement dans data/raw/.
-- Documenter la source, les paramètres de collecte et les limites des données dans le README.
+### Difficultés rencontrées et solutions
 
+La collecte de données demande davantage que l’écriture de requêtes Python. Il faut comprendre la documentation technique, identifier les bons endpoints, les paramètres attendus et les scopes nécessaires à l’authentification OAuth.
+
+Cette étape rappelle l’importance de la recherche documentaire, du diagnostic et de la communication lorsqu’un problème technique persiste.
+
+### Prochaines étapes
+- Explorer plus précisément les champs et les possibilités du référentiel ROME.
+- Définir le périmètre de collecte des offres : France métropolitaine, métiers, secteurs, territoires et période d’étude.
+- Vérifier les combinaisons de paramètres autorisées par l’API.
+- Construire une collecte structurée et reproductible, puis contrôler la qualité des données.
+- Préparer les analyses et visualisations répondant aux questions métier du projet.
+
+**Bilan :** les connexions techniques sont désormais opérationnelles. 
+Le projet entre dans une nouvelle phase : comprendre les données disponibles et concevoir une collecte cohérente avec les objectifs de l’observatoire.
 
