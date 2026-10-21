@@ -89,10 +89,13 @@ La collecte de données demande davantage que l’écriture de requêtes Python.
 
 Cette étape rappelle l’importance de la recherche documentaire, du diagnostic et de la communication lorsqu’un problème technique persiste.
 
-### Prochaines étapes
-- Explorer plus précisément les champs et les possibilités du référentiel ROME.
+# Jour 10 - 15 : Définir paramètres de collecte des offres 
+- Explorer les champs et possibilités du référentiel ROME
 - Définir le périmètre de collecte des offres : France métropolitaine, métiers, secteurs, territoires et période d’étude.
 - Vérifier les combinaisons de paramètres autorisées par l’API.
+
+### Prochaines étapes
+- Explorer plus précisément les champs et les possibilités du référentiel ROME.
 - Construire une collecte structurée et reproductible, puis contrôler la qualité des données.
 - Préparer les analyses et visualisations répondant aux questions métier du projet.
 
