@@ -89,13 +89,34 @@ La collecte de données demande davantage que l’écriture de requêtes Python.
 
 Cette étape rappelle l’importance de la recherche documentaire, du diagnostic et de la communication lorsqu’un problème technique persiste.
 
-# Jour 10 - 15 : Définir paramètres de collecte des offres 
+# Jours 10 - 15 : Définir paramètres de collecte des offres 
 - Explorer les champs et possibilités du référentiel ROME
-- Définir le périmètre de collecte des offres : France métropolitaine, métiers, secteurs, territoires et période d’étude.
-- Vérifier les combinaisons de paramètres autorisées par l’API.
+- Définir le périmètre de collecte des offres : France métropolitaine, métiers, secteurs, territoires et période d’étude. Nous avons décidé de couvrir les métiers, les secteurs et les territoires sur la période 2023–2026.
+- Explorer les champs et les possibilités du référentiel ROME.
+- nous avons enrégistré le reférentiel ROME dans data/raw et puis dans data/processed après vérification de la qualité de nos donnnées. Ce référentiel nous servira de base pour identifier les métiers dans les prochaines collectes statistiques.
+- Vérifier les combinaisons de paramètres autorisées par l’API marché du travail
+
+# Jours 16 -18 : vérification la possibilité de collecter les offres d’emploi par métier ROME et par région.
+
+- Vérification des métadonnées de l’indicateur OFF_1 : le croisement région (REG) × métier (ROME) × trimestre (TRIMESTRE) × origine des offres (ORIGINEOFF) est autorisé.
+
+- Tests de requêtes sur plusieurs codes ROME avec les mêmes paramètres, sur la région de code 84 (Auvergne-Rhône-Alpes).
+
+Résultats obtenus :
+
+A1203 : HTTP 200, données retournées.
+
+N2215, N4207, I1639, N2217 : HTTP 404.
+
+- Analyse du message d’erreur : l’échec provient d’un appel au service interne smartemploi-sldng. La cause exacte reste à déterminer.
+
+- Difficulté rencontrée : bien que les métadonnées autorisent le croisement ROME/région, plusieurs codes métiers valides du référentiel ROME renvoient une erreur HTTP 404.
+
+Action entreprise : envoi d’un courriel au support France Travail afin de clarifier les codes ROME pris en charge par l’indicateur OFF_1, la cause de ces erreurs et la méthode recommandée pour identifier les codes exploitables.
+
 
 ### Prochaines étapes
-- Explorer plus précisément les champs et les possibilités du référentiel ROME.
+- Prochaine étape : attendre le retour du support avant de lancer la collecte complète des offres par métier et par région. Les tests et les résultats obtenus sont conservés pour faciliter le diagnostic.
 - Construire une collecte structurée et reproductible, puis contrôler la qualité des données.
 - Préparer les analyses et visualisations répondant aux questions métier du projet.
 
